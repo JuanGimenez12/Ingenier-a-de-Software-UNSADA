@@ -107,13 +107,13 @@ def menu_principal():
             elif sub_opcion == "2":
                 return menu_principal()
             else:
-                print("Opción inválida. Regresando al menú principal.")
+                print("\nOpción inválida. Regresando al menú principal.")
 
 
         elif opcion == "0":
             print("Hasta luego!")
             break
         else:
-            print("Opción inválida. Por favor, inténtelo de nuevo.")
+            print("\nOpción inválida. Por favor, inténtelo de nuevo.")
 
 menu_principal()
