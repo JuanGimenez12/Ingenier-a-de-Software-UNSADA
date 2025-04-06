@@ -1,3 +1,5 @@
+#PROGRAMA PARA LA CALCULADORA BÁSICA
+# Grupo 1 EDD
 def suma():                                                      # Función para la suma           
     while True:                                                  # Ciclo para validar la entrada
         num1 = input("\nIngrese el primer número: ")             # Solicita el primer número
@@ -26,11 +28,24 @@ def resta():                                                     # Función para
     resultado = valor1 - valor2                                  # Realiza la resta 
     print(f"El resultado de la resta es: {resultado}")           # Muestra el resultado
 
-def multiplicacion():                                            # Función para la multiplicación    
-    num1 = float(input("Ingrese el primer número: "))            # Solicita el primer número
-    num2 = float(input("Ingrese el segundo número: "))           # Solicita el segundo número
-    resultado = num1 * num2                                      # Realiza la multiplicación
-    print(f"El resultado de la multiplicación es: {resultado}")  # Muestra el resultado
+def multiplicacion():                                            # Función para la multiplicación
+    while True:                                                  # Ciclo para validar la entrada
+        num1 = input("\nIngrese el primer número: ")             # Solicita el primer número
+        num2 = input("\nIngrese el segundo número: ")            # Solicita el segundo número
+
+        if not num1.isdigit() or not num2.isdigit():                            # Verifica que sean numéricos
+            print("\n⚠ Error: Debe ingresar solo números enteros positivos.")
+            continue                                                             # Repite la solicitud
+
+        num1, num2 = int(num1), int(num2)                                        # Convierte a enteros
+
+        if num1 < 0 or num2 < 0:                                                 # Verifica que sean positivos
+            print("\n⚠ Error: Debe ingresar solo números enteros POSITIVOS.")
+            continue                                                             # Repite la solicitud
+
+        resultado = num1 * num2
+        print(f"\nEl resultado de la multipicación es: {resultado}")
+        break                                                                    # Sale del bucle al obtener datos válidos
 
 def division():                                                  # Función para la división
     num1 = float(input("Ingrese el primer número: "))            # Solicita el primer número
