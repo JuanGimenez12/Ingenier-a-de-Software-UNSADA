@@ -1,3 +1,5 @@
+#PROGRAMA PARA LA CALCULADORA BÁSICA
+# Grupo 1 EDD
 def suma():                                                      # Función para la suma           
     while True:                                                  # Ciclo para validar la entrada
         num1 = input("\nIngrese el primer número: ")             # Solicita el primer número
