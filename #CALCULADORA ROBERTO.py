@@ -9,7 +9,7 @@ def suma():                                                      # Función para
 
         num1, num2 = int(num1), int(num2)                        # Convierte a enteros
 
-        if num1 < 0 or num2 < 0:                                 # Verifica que sean positivos 
+        if num1 <= 0 or num2 <= 0:                                 # Verifica que sean positivos 
             print("\n⚠ Error: Debe ingresar solo números enteros POSITIVOS.")
             continue                                             # Repite la solicitud
 
@@ -21,7 +21,9 @@ def suma():                                                      # Función para
 def resta():                                                     # Función para la resta
     num1 = float(input("Ingrese el primer número: "))            # Solicita el primer número
     num2 = float(input("Ingrese el segundo número: "))           # Solicita el segundo número
-    resultado = num1 - num2                                      # Realiza la resta
+    valor1 = max(num1, num2)                                     # Asigna el número mayor a valor1
+    valor2 = min(num1, num2)                                     # Asigna el número menor a valor2
+    resultado = valor1 - valor2                                  # Realiza la resta 
     print(f"El resultado de la resta es: {resultado}")           # Muestra el resultado
 
 def multiplicacion():                                            # Función para la multiplicación    
@@ -33,10 +35,14 @@ def multiplicacion():                                            # Función para
 def division():                                                  # Función para la división
     num1 = float(input("Ingrese el primer número: "))            # Solicita el primer número
     num2 = float(input("Ingrese el segundo número: "))           # Solicita el segundo número
-    if num2 != 0:                                                # Verifica que no sea cero
-        resultado = num1 / num2                                  # Realiza la división
+    
+    numerador = max(num1,num2)                                   #Asigna el valor más alto al numerador
+    denominador = min(num1, num2)                                #Asigna el valor más bajo al denominador
+    
+    if denominador != 0:                                         # Verifica que el denominador no sea cero
+        resultado = numerador / denominador                      # Realiza la división
         print(f"\nEl resultado de la división es: {resultado}")  # Muestra el resultado
-    else:                                                        # Si el segundo número es cero
+    else:                                                        # Si el denominador es cero
         print("Error: No se puede dividir por cero")             # Muestra un mensaje de error
 
 def menu_principal():                                            # Función para el menú principal
