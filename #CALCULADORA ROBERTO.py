@@ -62,7 +62,7 @@ def division():                                                  # Función para
 
 def menu_principal():                                            # Función para el menú principal
     while True:                                                  # Ciclo para mostrar el menú
-        print("\n      Calculadora BÁSICA -  Grupo 1 EDD     ")  # Título del menú
+        print("\n      Calculadora BÁSICA -  Grupo 1 IDS     ")  # Título del menú
         print("-------------------------------------------")
         print("\n[1] - SUMAR. ")
         print("\n[2] - RESTAR. ")
@@ -92,31 +92,36 @@ def menu_principal():                                            # Función para
                     return menu_principal()                       # Vuelve al menú principal
 
 
-        elif opcion == "2":                                       # Si la opción es 2
+        elif opcion == "2"                                         # Si la opción es 2
+            while True:
+
             resta()                                               # Llama a la función resta
-            print("1. Volver a Restar")                           # Opción para volver a restar
-            print("2. Volver al menú principal")
-            sub_opcion = input("Ingrese su opción: ")             # Solicita la opción
-            if sub_opcion == "1":                                 # Si la opción es 1
-                resta()                                           # Repite la resta
-            elif sub_opcion == "2":                               # Si la opción es 2
+            print("\nS - Volver a Restar")                           # Opción para volver a restar
+            print("\nN - Volver al  menú  principal")
+            sub_opcion = input("Ingrese su opción: ").upper()      # Convierte a mayúsculas #  Solicita la opción
+                
+            if sub_opcion == "S":                                 # Si la opción es S
+                continue                                           # Repite la resta
+            elif sub_opcion == "N":                               # Si la opción es N
                 return menu_principal()                           # Vuelve al menú principal
             else:
                 print("Opción inválida. Regresando al menú principal.")  # Mensaje de error
-
+                return menu_principal()
 
         elif opcion == "3":                                      # Si la opción es 3
-            multiplicacion()
-            print("1. Volver a Multiplicar")                     # Opción para volver a multiplicar
-            print("2. Volver al menú principal")                 # Opción para volver al menú principal
-            sub_opcion = input("Ingrese su opción: ")            # Solicita la opción
-            if sub_opcion == "1":                                # Si la opción es 1
-                multiplicacion()                                 # Repite la multiplicación
-            elif sub_opcion == "2":                              # Si la opción es 2
+            while True:
+        
+            multiplicacion()                                    # Llama a la función multiplicación
+            print("\nS - Volver a Multiplicar")                     # Opción para volver a multiplicar
+            print("\nN - Volver al  menú principal")                 # Opción para volver al menú principal
+            sub_opcion = input("Ingrese su opción: ").upper()      # Convierte a mayúsculas #  Solicita la opción
+            if sub_opcion == "S":                                # Si la opción es S
+                continue                               # Repite la multiplicación
+            elif sub_opcion == "N":                              # Si la opción es N
                 return menu_principal()                          # Vuelve al menú principal
             else:
                 print("Opción inválida. Regresando al menú principal.")  # Mensaje de error
-
+                return menu_principal()
                 
         elif opcion == "4":                                      # Si la opción es 4 
             division()                                           # Llama a la función división
