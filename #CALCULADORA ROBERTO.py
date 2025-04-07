@@ -26,7 +26,7 @@ def resta():                                                     # Función para
     valor1 = max(num1, num2)                                     # Asigna el número mayor a valor1
     valor2 = min(num1, num2)                                     # Asigna el número menor a valor2
     resultado = valor1 - valor2                                  # Realiza la resta 
-    print(f"El resultado de la resta es: {resultado}")           # Muestra el resultado
+    print(f"\nEl resultado de la resta es: {resultado}")           # Muestra el resultado
 
 def multiplicacion():                                            # Función para la multiplicación
     while True:                                                  # Ciclo para validar la entrada
@@ -58,7 +58,7 @@ def division():                                                  # Función para
         resultado = numerador / denominador                      # Realiza la división
         print(f"\nEl resultado de la división es: {resultado}")  # Muestra el resultado
     else:                                                        # Si el denominador es cero
-        print("Error: No se puede dividir por cero")             # Muestra un mensaje de error
+        print("\nError: No se puede dividir por cero")             # Muestra un mensaje de error
 
 def menu_principal():                                            # Función para el menú principal
     while True:                                                  # Ciclo para mostrar el menú
@@ -72,7 +72,7 @@ def menu_principal():                                            # Función para
         opcion = input("\nSELECCIONAR UNA OPCIÓN [0 a 4] Y PRESIONAR ENTER: __  ") # Solicita la opción
 
         if not opcion.isdigit():                                  # Verifica si la entrada NO es numérica
-            print("⚠ Error: Debe ingresar solo números entre 0 y 4.")  # Mensaje de error
+            print("\n⚠ Error: Debe ingresar solo números entre 0 y 4.")  # Mensaje de error
             continue                                              # Vuelve a pedir la opción
 
         if opcion == "1":                                         # Si la opción es 1
@@ -88,7 +88,7 @@ def menu_principal():                                            # Función para
                 elif sub_opcion == "N":                           # Si la opción es N
                     return menu_principal()                       # Vuelve al menú principal
                 else:
-                    print("Opción inválida. Regresando al menú principal.") # Mensaje de error
+                    print("\nOpción inválida. Regresando al menú principal.") # Mensaje de error
                     return menu_principal()                       # Vuelve al menú principal
 
 
@@ -98,14 +98,14 @@ def menu_principal():                                            # Función para
             resta()                                               # Llama a la función resta
             print("\nS - Volver a Restar")                           # Opción para volver a restar
             print("\nN - Volver al  menú  principal")
-            sub_opcion = input("Ingrese su opción: ").upper()      # Convierte a mayúsculas #  Solicita la opción
+            sub_opcion = input("\nIngrese su opción: ").upper()      # Convierte a mayúsculas #  Solicita la opción
                 
             if sub_opcion == "S":                                 # Si la opción es S
                 continue                                           # Repite la resta
             elif sub_opcion == "N":                               # Si la opción es N
                 return menu_principal()                           # Vuelve al menú principal
             else:
-                print("Opción inválida. Regresando al menú principal.")  # Mensaje de error
+                print("\nOpción inválida. Regresando al menú principal.")  # Mensaje de error
                 return menu_principal()
 
         elif opcion == "3":                                      # Si la opción es 3
@@ -114,13 +114,13 @@ def menu_principal():                                            # Función para
             multiplicacion()                                    # Llama a la función multiplicación
             print("\nS - Volver a Multiplicar")                     # Opción para volver a multiplicar
             print("\nN - Volver al  menú principal")                 # Opción para volver al menú principal
-            sub_opcion = input("Ingrese su opción: ").upper()      # Convierte a mayúsculas #  Solicita la opción
+            sub_opcion = input("\nIngrese su opción: ").upper()      # Convierte a mayúsculas #  Solicita la opción
             if sub_opcion == "S":                                # Si la opción es S
                 continue                               # Repite la multiplicación
             elif sub_opcion == "N":                              # Si la opción es N
                 return menu_principal()                          # Vuelve al menú principal
             else:
-                print("Opción inválida. Regresando al menú principal.")  # Mensaje de error
+                print("\nOpción inválida. Regresando al menú principal.")  # Mensaje de error
                 return menu_principal()
                 
         elif opcion == "4":                                      # Si la opción es 4 
@@ -129,19 +129,19 @@ def menu_principal():                                            # Función para
             division()                                           # Llama a la función división
             print("\nS -Volver a Dividir")                         # Opción para volver a dividir
             print("\nN Volver al menú principal")                 # Opción para volver al menú principal
-            sub_opcion = input("Ingrese su opción: ").upper()      # Convierte a mayúsculas        # Solicita la opción
+            sub_opcion = input("\nIngrese su opción: ").upper()      # Convierte a mayúsculas        # Solicita la opción
             if sub_opcion == "S":                                # Si la opción es 1
                continue                                       # Repite la división
             elif sub_opcion == "N":                              # Si la opción es 2
                 return menu_principal()                          # Vuelve al menú principal
             else:
-                print("Opción inválida. Regresando al menú principal.")   # Mensaje de error               
+                print("\nOpción inválida. Regresando al menú principal.")   # Mensaje de error               
                 return menu_principal()
  
         elif opcion == "0":                                      # Si la opción es 0
-            print("Hasta luego!")                                # Mensaje de despedida
+            print("\nHasta luego!")                                # Mensaje de despedida
             break                                                # Sale del bucle y termina el programa
         else:                                                    # Si la opción no es válida
-            print("Opción inválida. Por favor, inténtelo de nuevo.")  # Mensaje de error
+            print("\nOpción inválida. Por favor, inténtelo de nuevo.")  # Mensaje de error
 
 menu_principal()
