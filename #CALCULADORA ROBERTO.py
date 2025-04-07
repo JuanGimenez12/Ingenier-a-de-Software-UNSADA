@@ -92,7 +92,7 @@ def menu_principal():                                            # Función para
                     return menu_principal()                       # Vuelve al menú principal
 
 
-        elif opcion == "2"                                         # Si la opción es 2
+        elif opcion == "2":                                        # Si la opción es 2
             while True:
 
             resta()                                               # Llama a la función resta
