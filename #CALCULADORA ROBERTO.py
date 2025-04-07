@@ -21,8 +21,8 @@ def suma():                                                      # Función para
 
 
 def resta():                                                     # Función para la resta
-    num1 = float(input("Ingrese el primer número: "))            # Solicita el primer número
-    num2 = float(input("Ingrese el segundo número: "))           # Solicita el segundo número
+    num1 = float(input("\nIngrese el primer número: "))            # Solicita el primer número
+    num2 = float(input("\nIngrese el segundo número: "))           # Solicita el segundo número
     valor1 = max(num1, num2)                                     # Asigna el número mayor a valor1
     valor2 = min(num1, num2)                                     # Asigna el número menor a valor2
     resultado = valor1 - valor2                                  # Realiza la resta 
@@ -48,8 +48,8 @@ def multiplicacion():                                            # Función para
         break                                                                    # Sale del bucle al obtener datos válidos
 
 def division():                                                  # Función para la división
-    num1 = float(input("Ingrese el primer número: "))            # Solicita el primer número
-    num2 = float(input("Ingrese el segundo número: "))           # Solicita el segundo número
+    num1 = float(input("\nIngrese el primer número: "))            # Solicita el primer número
+    num2 = float(input("\nIngrese el segundo número: "))           # Solicita el segundo número
     
     numerador = max(num1,num2)                                   #Asigna el valor más alto al numerador
     denominador = min(num1, num2)                                #Asigna el valor más bajo al denominador
