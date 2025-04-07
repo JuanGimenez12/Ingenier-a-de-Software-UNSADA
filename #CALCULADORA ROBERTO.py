@@ -124,17 +124,19 @@ def menu_principal():                                            # Función para
                 return menu_principal()
                 
         elif opcion == "4":                                      # Si la opción es 4 
+            while True:
+                
             division()                                           # Llama a la función división
-            print("1. Volver a Dividir")                         # Opción para volver a dividir
-            print("2. Volver al menú principal")                 # Opción para volver al menú principal
-            sub_opcion = input("Ingrese su opción: ")            # Solicita la opción
-            if sub_opcion == "1":                                # Si la opción es 1
-                division()                                       # Repite la división
-            elif sub_opcion == "2":                              # Si la opción es 2
+            print("\nS -Volver a Dividir")                         # Opción para volver a dividir
+            print("\nN Volver al menú principal")                 # Opción para volver al menú principal
+            sub_opcion = input("Ingrese su opción: ").upper()      # Convierte a mayúsculas        # Solicita la opción
+            if sub_opcion == "S":                                # Si la opción es 1
+               continue                                       # Repite la división
+            elif sub_opcion == "N":                              # Si la opción es 2
                 return menu_principal()                          # Vuelve al menú principal
             else:
                 print("Opción inválida. Regresando al menú principal.")   # Mensaje de error               
-
+                return menu_principal()
  
         elif opcion == "0":                                      # Si la opción es 0
             print("Hasta luego!")                                # Mensaje de despedida
